@@ -74,3 +74,9 @@ package a {
     implicit val x: test.enclosingPackageStripIsLast.B = new B
   }
 }
+package factory{
+  private [factory] class Factory
+  object Factory{
+    def f(): test.factory.Factory = new Factory()
+  }
+}

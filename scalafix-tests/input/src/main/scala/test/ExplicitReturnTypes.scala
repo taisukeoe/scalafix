@@ -79,3 +79,9 @@ package a {
     implicit val x = new B
   }
 }
+package factory{
+  private [factory] class Factory
+  object Factory{
+    def f() = new Factory()
+  }
+}
